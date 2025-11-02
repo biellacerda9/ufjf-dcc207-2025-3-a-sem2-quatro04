@@ -1,5 +1,5 @@
 // Define tipos icone
-type IconName = 'pill' | 'sun' | 'moon';
+type IconName = 'pill' | 'sun' | 'moon' | 'clock';
 
 //Define as propriedades do Icon
 interface IconProps {
@@ -12,6 +12,7 @@ const IconMap: Record<IconName, string> = {
     pill: '💊',
     sun: '☀️',
     moon: '🌙',
+    clock: '🕒',
 };
 
 //Componente Icon
