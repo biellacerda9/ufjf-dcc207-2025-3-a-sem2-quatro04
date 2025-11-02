@@ -3,12 +3,14 @@ import React from 'react';
 import dadosPlano from "../data/dadosPlano.json";
 import PatientHeader from '../components/PatientHeader';
 import MedicationCard from '../components/MedicationCard';
+import TimeSlotHeader from '../components/TimeSlotHeader';
 
 export default function DashboardPage() {
 
   const paciente = dadosPlano.paciente;
   const remedioManha = dadosPlano.horarios[0].medicamentos[0]; // Omeprazol
   const remedioTarde = dadosPlano.horarios[1].medicamentos[0]; // Paracetamol
+  const horarioManha = dadosPlano.horarios[0]
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
@@ -16,6 +18,10 @@ export default function DashboardPage() {
       <div className="max-w-2xl w-full">
         <h2 className="text-xs font-semibold text-gray-500 mb-2 uppercase">Testando: PatientHeader.tsx</h2>
         <PatientHeader paciente={paciente} />
+
+        <h2 className="text-xs font-semibold text-gray-500 mt-8 mb-2 uppercase"> Testando: TimeSlotHeader.tsx</h2>
+        <TimeSlotHeader titulo={horarioManha.titulo} icone={horarioManha.icone as "sun" | "clock" | "moon"}/>
+        
         <h2 className="text-xs font-semibold text-gray-500 mt-8 mb-2 uppercase">Testando: MedicationCard.tsx</h2>
         
         <div className="flex flex-col gap-4">
@@ -24,7 +30,7 @@ export default function DashboardPage() {
             nome={remedioManha.nome}
             dosagem={remedioManha.dosagem}
             horario={remedioManha.horario}
-            status={remedioManha.status} // "pendente"
+            status={remedioManha.status as "pendente" | "tomado"} // "pendente"
           />
           
           <MedicationCard
