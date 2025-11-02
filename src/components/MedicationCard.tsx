@@ -10,10 +10,11 @@ import Button from './button';
 export type MedicationCardProps = {
   nome: string;
   dosagem: string;
+  horario: string;
   status: 'tomado' | 'pendente';
 }
 
-export default function MedicationCard({ nome, dosagem, status }: MedicationCardProps) {
+export default function MedicationCard({ nome, dosagem, horario, status }: MedicationCardProps) {
   
   const isTaken = status === 'tomado';
 
@@ -27,7 +28,7 @@ export default function MedicationCard({ nome, dosagem, status }: MedicationCard
         
         <div className="flex-grow">
           <Subheading>{nome}</Subheading> 
-          <BodyText className="!text-sm text-gray-500">{dosagem}</BodyText> 
+          <BodyText className="!text-sm text-gray-500">{dosagem} • {horario}</BodyText> 
         </div>
 
         <div className="ml-auto">
