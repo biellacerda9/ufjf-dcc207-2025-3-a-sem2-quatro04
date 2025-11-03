@@ -9,7 +9,7 @@ export type MedicationStatus = 'pendente' | 'tomado';
 
 // Define a interface para os remedios
 export interface MedicationProps {
-    id: number;
+    id: string;
     nome: string;
     dosagem: string;
     horario: string;
