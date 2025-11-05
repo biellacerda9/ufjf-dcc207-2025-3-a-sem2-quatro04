@@ -21,7 +21,7 @@ export default function DashboardPage() {
               key={horario.id}
               titulo={horario.titulo}
               icone={horario.icone as "sun"|"afternoon"|"moon"}
-              medicamentos={horario.medicamentos} // Erro crítico para produção
+              medicamentos={horario.medicamentos as any} // Erro crítico para produção
             />
           ))}
         </div>
