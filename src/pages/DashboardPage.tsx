@@ -3,6 +3,7 @@ import React from 'react';
 import dadosPlano from "../data/dadosPlano.json";
 import PatientHeader from '../components/PatientHeader';
 import TimeSlotGroup from '../components/TimeSlotGroup';
+import Button from '../components/button';
 
 export default function DashboardPage() {
 
@@ -25,7 +26,9 @@ export default function DashboardPage() {
             />
           ))}
         </div>
-
+          <div className="mt-8 w-full flex justify-center">
+          <Button texto="Editar" status="pendente" />
+        </div>
       </div>
     </div>
   );

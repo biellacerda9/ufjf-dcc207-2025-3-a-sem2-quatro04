@@ -5,7 +5,6 @@ import TimeSlotHeader from "./TimeSlotHeader";
 import MedicationCard from "./MedicationCard";
 import Button from "./button";
 
-
 export type MedicationStatus = 'pendente' | 'tomado';
 
 // Define a interface para os remedios
@@ -24,6 +23,8 @@ type TimeSlotGroupProps = {
     medicamentos: MedicationProps[];
 }
 
+
+
 export default function TimeSlotGroup ({ titulo, icone, medicamentos}: TimeSlotGroupProps) {
     return (
         <Card>
@@ -37,17 +38,10 @@ export default function TimeSlotGroup ({ titulo, icone, medicamentos}: TimeSlotG
                         status = {medicamentos.status}
                         horario = {medicamentos.horario}
                     />
-                    )}
-                    <div className="w-full flex justify-center items-center">
-                        <div className="">
-                            <Button 
-                                texto='Editar'
-                                status= 'pendente'
-                            />
-                        </div>
-                    </div>
+                    )}  
             </div>
             
         </Card>
+        
     )
 }
