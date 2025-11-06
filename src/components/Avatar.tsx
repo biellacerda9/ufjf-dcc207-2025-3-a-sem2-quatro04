@@ -1,6 +1,6 @@
 type AvatarProps = {
     src: string;
-    alt: string;
+    alt: string;    
 }
 
 export function Avatar({ src, alt }: AvatarProps) {

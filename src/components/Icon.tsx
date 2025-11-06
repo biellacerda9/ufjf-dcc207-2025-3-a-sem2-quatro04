@@ -2,7 +2,7 @@
 type IconName = 'pill' | 'sun' | 'moon' | 'afternoon';
 
 //Define as propriedades do Icon
-interface IconProps {
+type IconProps = {
     name: IconName;
     className?: string;
 }
@@ -21,6 +21,6 @@ export default function Icon ({ name, className }: IconProps) {
     const symbol = IconMap[name];
 
     return (
-        <span className={ClassName} aria-hidden = "true"> {symbol} </span>
+        <span className={ClassName}> {symbol} </span>
     );
 }
