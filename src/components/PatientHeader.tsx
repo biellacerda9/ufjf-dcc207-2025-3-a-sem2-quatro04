@@ -19,8 +19,8 @@ export default function PatientHeader({ paciente }: PatientHeaderProps) {
       <div className="flex items-center gap-3">
       <Avatar src={paciente.fotoUrl} alt={paciente.nome} />
         <div>
-          <Heading className="!text-2xl">{`Olá, ${paciente.nome}!`}</Heading>
-          <BodyText className="!text-base text-gray-600">
+          <Heading className="text-2xl">{`Olá, ${paciente.nome}!`}</Heading>
+          <BodyText className="text-base text-gray-600">
             Plano de Medicação de Hoje
           </BodyText>
         </div>
