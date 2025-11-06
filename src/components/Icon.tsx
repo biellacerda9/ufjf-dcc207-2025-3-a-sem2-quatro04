@@ -12,7 +12,7 @@ const IconMap: Record<IconName, string> = {
     pill: '💊',
     sun: '☀️',
     moon: '🌙',
-    afternoon: '🌤️',
+    afternoon: '🕛',
 };
 
 //Componente Icon
