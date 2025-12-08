@@ -50,7 +50,7 @@ export default function MedicationCard({ nome, dosagem, horario, status }: Medic
         
         <div>
           <Subheading>{nome}</Subheading> 
-          <BodyText className="text-sm">{dosagem} • {horario}</BodyText> 
+          <BodyText className="text-sm">{dosagem} • {horario} teste</BodyText> 
         </div>
 
         <div className="ml-auto">
