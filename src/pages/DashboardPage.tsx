@@ -25,7 +25,7 @@ export default function DashboardPage() {
           ))}
         </div>
           <div className="mt-8 w-full flex justify-center">
-          <Button texto="Editar" status="pendente" />
+          <Button texto="Editar" status="pendente" tipo="simples"/>
         </div>
       </div>
     </div>

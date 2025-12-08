@@ -24,7 +24,7 @@ export default function PatientHeader({ paciente }: PatientHeaderProps) {
         </div>
       </div>
 
-      <Button texto="Adicionar Medicamento" />
+      <Button texto="Adicionar Medicamento" tipo="simples" />
     </div>
   );
 }
