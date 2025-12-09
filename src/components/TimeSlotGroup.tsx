@@ -18,11 +18,12 @@ type TimeSlotGroupProps = {
     titulo: string;
     icone: 'sun' | 'moon' | 'afternoon';
     medicamentos: MedicationProps[];
+    apenasPendentes: boolean;
 }
 
 
 
-export default function TimeSlotGroup ({ titulo, icone, medicamentos}: TimeSlotGroupProps) {
+export default function TimeSlotGroup ({ titulo, icone, medicamentos, apenasPendentes}: TimeSlotGroupProps) {
     return (
         <Card>
             <TimeSlotHeader titulo = {titulo} icone={icone} />
@@ -34,6 +35,7 @@ export default function TimeSlotGroup ({ titulo, icone, medicamentos}: TimeSlotG
                         dosagem = {medicamentos.dosagem}
                         status = {medicamentos.status}
                         horario = {medicamentos.horario}
+                        apenasPendentes={apenasPendentes}
                     />
                     )}  
             </div>
