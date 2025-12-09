@@ -12,7 +12,7 @@ export default function Button({ texto, status = 'pendente' , textoAtivo = "Toma
 
   if (status === 'excluir') {
     return (
-      <button onClick={onClick} className='bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-red-700 transition'> {texto} </button>
+      <button onClick={onClick} className='bg-red-600 text-white font-semibold text-lg shadow-md hover:bg-red-700 rounded-full transition w-8 h-8 flex items-center justify-center'> x </button>
     )
   }
   

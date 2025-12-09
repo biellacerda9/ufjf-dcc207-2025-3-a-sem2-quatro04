@@ -86,7 +86,7 @@ export default function MedicationCard({ nome, dosagem, horario, status }: Medic
         </div>
       </div>
     </Card>
-    <div className='flex justify-center mt-2'>{buttonDelete}</div>
+    <div className='absolute'>{buttonDelete}</div>
     </div>
   );
   } else {
@@ -94,7 +94,7 @@ export default function MedicationCard({ nome, dosagem, horario, status }: Medic
       <div
         onMouseEnter = {mouseEnter}
         onMouseLeave = {mouseExit}
-        className='mb-4'
+        className='mb-4 '
         >
     <Card 
       className="border border-gray-200"
@@ -117,7 +117,7 @@ export default function MedicationCard({ nome, dosagem, horario, status }: Medic
         </div>
       </div>
     </Card>
-    <div className='flex justify-center mt-2'>{buttonDelete}</div>
+    <div className='absolute '>{buttonDelete}</div>
     </div>
     );
   }
