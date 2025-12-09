@@ -8,6 +8,7 @@ export default function DashboardPage() {
 
   const [isDarkMode, setIsDarkMode] = useState('light');
   const [apenasPendentes, setApenasPendentes] = useState(false);
+  const [isEditingMode, setIsEditingMode] = useState(false);
 
   function toDarkMode(){
       switch (isDarkMode){
@@ -24,7 +25,13 @@ export default function DashboardPage() {
     setApenasPendentes(!apenasPendentes);
   }
 
+  function toEditingMode() {
+    setIsEditingMode(!isEditingMode);
+  }
+
   const isDark = isDarkMode === 'dark'; 
+  const editButtonText = isEditingMode? "Concluir Edição" : "Editar";
+  const editButtonStatus = isEditingMode ? "excluir" : "pendente";
 
   if( isDark ){
      return (
@@ -59,11 +66,13 @@ export default function DashboardPage() {
               icone={horario.icone as "sun"|"afternoon"|"moon"}
               medicamentos={horario.medicamentos as any}
               apenasPendentes={apenasPendentes}
+              isEditingMode = {isEditingMode}
+              mode = {isDark? 'dark' : 'light'}
             />
           ))}
         </div>
           <div className="mt-8 w-full flex justify-center">
-          <Button texto="Editar" status="pendente" tipo="simples"/>
+          <Button texto={editButtonText} status={editButtonStatus} tipo="simples" onClick={toEditingMode}/>
         </div>
       </div>
     </div>
@@ -102,11 +111,13 @@ export default function DashboardPage() {
               icone={horario.icone as "sun"|"afternoon"|"moon"}
               medicamentos={horario.medicamentos as any}
               apenasPendentes={apenasPendentes}
+              isEditingMode = {isEditingMode}
+              mode = {isDark? 'dark' : 'light'}
             />
           ))}
         </div>
           <div className="mt-8 w-full flex justify-center">
-          <Button texto="Editar" status="pendente" tipo="simples"/>
+          <Button texto={editButtonText} status={editButtonStatus} tipo="simples" onClick={toEditingMode}/>
         </div>
       </div>
     </div>
